@@ -1,0 +1,5 @@
+<form #f1="ngForm">
+    <input type="text" name="insertId" placeholder="Insert a Voyage Id" [(ngModel)]="sk" />
+    <input type="reset" name="delete" value="DeleteVoyage" (click)="onReset(f1)" />
+</form>
+<app-affiche></app-affiche>

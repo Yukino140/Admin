@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <legend style="margin-left:50px;font-style: italic;">Insert a voyage data</legend><br>
+    <label class="form-label">Voyage ID:</label>
+    <input type="text" class="form-control" size="20" name="id" [(ngModel)]="p.id" /><br><br>
+    <label class="form-label">Voyage Destination:</label>
+    <input type="text" name="destination" class="form-control" [(ngModel)]="p.destination" /><br><br>
+    <label class="form-label">Voyage Price:</label>
+    <input type="text" name="price" class="form-control" [(ngModel)]="p.prix" /><br><br>
+    <label class="form-label">Promo?</label>
+    <input type="radio" name="promo" value="true" [(ngModel)]="p.promo" />Yes
+    <input type="radio" name="promo" value="false" [(ngModel)]="p.promo" />No<br><br>
+    <label class="form-label">Insert image Source:</label>
+    <input type="text" name="source" value="myfile.value" [(ngModel)]=p.image/>
+    <input type="file" name="myfile" [(ngModel)]="p.image" />
+    <br><br>
+    <label class="form-label">New?</label>
+    <input type="radio" name="new" value="true" [(ngModel)]="p.nouveau" />Yes
+    <input type="radio" name="new" value="false" [(ngModel)]="p.nouveau" />No<br><br>
+    <label class="form-label">Delay</label>
+    <input type="date" name="date" value="delay" [(ngModel)]="p.delay" /><br><br>
+    <label class="form-label">categories</label>
+    <select class="form-control">
+        <option *ngFor="let i of categories" value="i" name="i" [(ngModel)]="p.categories" >{{i}}</option> 
+    </select><br><br>
+    <label class="form-label">Descriptions</label>
+    <textarea cols="80" class="form-control" rows="5" name="descriptions" [(ngModel)]="p.description"></textarea><br><br>
+    <input type="submit" class="btn btn-primary" name="insert" value="AjoutVoyage" /><br><br>
+
+</form>
+<app-affiche></app-affiche>

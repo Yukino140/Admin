@@ -1,0 +1,35 @@
+<mat-drawer-container class="example-container" autosize>
+    <div class="sidenav-content">
+        <button type="button" class="fas fa-bars" mat-button (click)="drawer.toggle()">
+      
+    </button>
+    </div>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <img src="assets/logo.png" /><br><br>
+
+        <ul class="nav flex-column">
+            <a routerLink="Home" class="fas fa-home">Home</a><br>
+            <a (click)="showFiller = !showFiller" class="fas fa-plus" mat-raised-button>
+                    Add Records
+            </a>
+            <li *ngIf="showFiller" class="nav-item">
+                <a class="nav-link active" routerLink="New Records">New Record</a>
+            </li>
+            <li *ngIf="showFiller" class="nav-item">
+                <a class="nav-link active" routerLink="Modify Records">Modify Record</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Delete Records">Delete Record</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Search Records">Search Record</a>
+            </li>
+
+        </ul>
+
+
+    </mat-drawer>
+
+    <router-outlet style="width:100%"></router-outlet>
+
+</mat-drawer-container>

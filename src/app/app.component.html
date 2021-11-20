@@ -1,33 +1,3 @@
-<img src="assets/logo.png" />
 <h2>Page Admin</h2>
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <legend style="margin-left:50px;font-style: italic;">Insert a voyage data</legend><br>
-    <label>Voyage ID:</label>
-    <input type="text" name="id" [(ngModel)]="p.id" /><br><br>
-    <label>Voyage Destination:</label>
-    <input type="text" name="destination" [(ngModel)]="p.destination" /><br><br>
-    <label>Voyage Price:</label>
-    <input type="text" name="price" [(ngModel)]="p.prix" /><br><br>
-    <label>Promo?</label>
-    <input type="radio" name="promo" value="true" [(ngModel)]="p.promo" />Yes
-    <input type="radio" name="promo" value="false" [(ngModel)]="p.promo" />No<br><br>
-    <label>Insert image Source:</label>
-    <input type="text" name="source" value="myfile.value" [(ngModel)]=p.image/>
-    <input type="file" name="myfile" [(ngModel)]="p.image" />
-    <br><br>
-    <label>New?</label>
-    <input type="radio" name="new" value="true" [(ngModel)]="p.nouveau" />Yes
-    <input type="radio" name="new" value="false" [(ngModel)]="p.nouveau" />No<br><br>
-    <label>Delay</label>
-    <input type="date" name="date" value="delay" [(ngModel)]="p.delay" /><br><br>
-    <label>categories</label>
-    <select>
-        <option *ngFor="let i of categories" value="i.value" name="i" [(ngModel)]="p.categories" >{{i}}</option> 
-    </select><br><br>
-    <label>Descriptions</label>
-    <textarea cols="80" rows="5" name="descriptions" [(ngModel)]="p.description"></textarea><br><br>
-    <input type="submit" name="insert" value="ajoutVoyage" /><br><br>
-    <input type="text" name="insertId" placeholder="Insert a Voyage Id" [(ngModel)]="sk" />
-    <input type="reset" name="delete" value="DeleteVoyage" (click)="onReset(f)" />
-</form>
-<app-affiche></app-affiche>
+<app-nav-bar></app-nav-bar>
+<router-outlet></router-outlet>
