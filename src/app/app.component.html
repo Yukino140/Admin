@@ -1,3 +1,21 @@
-<h2>Page Admin</h2>
-<app-nav-bar></app-nav-bar>
+<div>
+    <form #f="ngForm" class="example-form" (ngSubmit)="onSubmit(f)">
+        <div class="fas fa-user-cog">
+
+            <p>
+                Welcome Administrator</p>
+        </div>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Insert username" name="k" [(ngModel)]="k">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Enter Password" name="l" [(ngModel)]="l" />
+        </mat-form-field>
+        <button mat-raised-button type="submit" style="margin-left:40%;" color="warn">Submit</button>
+    </form>
+</div>
+<app-nav-bar *ngIf="control"></app-nav-bar>
 <router-outlet></router-outlet>

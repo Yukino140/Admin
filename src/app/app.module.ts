@@ -14,6 +14,9 @@ import { SearchRecordsComponent } from './components/search-records/search-recor
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { HomeComponent } from './components/home/home.component';
+import { Page1Component } from './components/page1/page1.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -26,15 +29,17 @@ import { HomeComponent } from './components/home/home.component';
     ModifyRecordsComponent,
     DeleteRecordsComponent,
     SearchRecordsComponent,
-    HomeComponent
+    HomeComponent,
+    Page1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSidenavModule
- 
+    MatSidenavModule,
+    MatInputModule,
+    MatButtonModule
 
   ],
   providers: [],

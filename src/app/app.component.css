@@ -1,3 +1,39 @@
-body {
-    border: 2px solid black;
+.form {
+    margin: 50%;
+    margin-top: 17%;
+    margin-left: 50%;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    float: center;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+div {
+    font-size: 20px;
+    float: left;
+    margin-left: 150px;
+}
+
+div>form {
+    margin-left: 70%;
+    margin-top: 50%;
+    font-size: 15px;
+}
+
+div>p {
+    font-size: 20px;
+    float: right;
+    padding-left: 10px;
 }

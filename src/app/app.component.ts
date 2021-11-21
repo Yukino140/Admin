@@ -10,6 +10,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  k:string="";
+  l:string="";
+  control=false;
+  onSubmit(f:NgForm){
+    if((this.l=="admin")&&(this.k=="admin"))
+    this.control=true;
+  }
   title = 'Admin';
  
 }
